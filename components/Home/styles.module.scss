@@ -1,47 +1,93 @@
-.ourService{
+.ourService {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  &__header {
+    h2 {
+      text-align: center;
+      font-family: "Next Sphere";
+      font-weight: 900;
+      font-style: normal;
+      font-size: 3.5em;
+      line-height: 1;
+      background: linear-gradient(32deg, rgb(251, 95, 166) 46%, #0078d4 64%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+  }
+  &__cards {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 1em;
-    &__header{
-        h2{
-            text-align: center;
-            font-family: "Next Sphere";
-            font-weight: 900;
-            font-style: normal;
-            font-size: 3.5em;
-            line-height: 1;
-            background: linear-gradient(32deg, rgb(251, 95, 166) 46%, #0078d4 64%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            color: transparent;
+    > li {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      .ourServiceCard__topHeading {
+        width: 100%;
+        h3{
+            width: 100%;
+            border-bottom: 2px solid rgba(128, 128, 128, 0.508);
+             
         }
+      }
+      &:nth-last-of-type(1) {
+        width: calc(33.3% - 1em);
+        flex-direction: column-reverse;
+      }
+      &:nth-last-of-type(2) {
+        width: calc(33.3% - 1em);
+        flex-direction: column-reverse;
+      }
+      &:nth-last-of-type(3) {
+        width: calc(33.3% - 1em);
+        flex-direction: column-reverse;
+      }
+      &:nth-last-of-type(4) {
+        width: calc(33.33% - 1em);
+        flex-direction: column;
+      }
+      &:nth-last-of-type(5) {
+        width: calc(66.66% - 1em);
+        flex-direction: column;
+      }
     }
-    &__cards{
+    &__topHeading {
+      position: relative;
+    }
+    .ourServiceCard {
+      height: 100%;
+      border-radius: 1em;
+      padding: 2em 1em;
+      &__content {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        >li{
-
+        flex-direction: column;
+        gap: 0.5em;
+        &__icon {
+          display: flex;
+          width: 3em;
+          height: 3em;
+          padding: 0.5em;
+          box-sizing: content-box;
+          background: white;
+          border-radius: 100%;
+          img {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+            border-radius: 1em;
+          }
         }
-        &__topHeading{
-
+        &__heading {
+          font-size: 1em;
         }
-        .ourServiceCard{
-            &__overlay{
-                img{
-
-                }
-            }
-            &__content{
-                i{
-                    img{
-
-                    }
-                }
-                &__heading{}
-                &__desc{}
-            }
+        &__desc {
+          font-size: 0.7em;
         }
+      }
     }
+  }
 }

@@ -9,16 +9,13 @@ const OurServiceCard = ({
   desc,
 }) => {
   return (
-    <div className={styles.ourServiceCard}>
-      <div className={styles.ourServiceCard__overlay}>
-        <Image src={backgroundImage.src} alt={backgroundImage.alt} width={700} height={700} />
-      </div>
+    <div className={`${styles.ourServiceCard}`} style={{ backgroundImage: `url(${backgroundImage.src})` }}>
       <div className={styles.ourServiceCard__content}>
-        <i className={styles.ourServiceCard__icon}>
+        <i className={styles.ourServiceCard__content__icon}>
           <Image src={icon.src} alt={icon.alt} width={200} height={200} />
         </i>
-        <h3 className={styles.ourServiceCard__heading}>{heading}</h3>
-        <p className={styles.ourServiceCard__desc}>{desc}</p>
+        <h3 className={styles.ourServiceCard__content__heading}>{heading}</h3>
+        <p className={styles.ourServiceCard__content__desc}>{desc}</p>
       </div>
     </div>
   );
@@ -101,7 +98,7 @@ const OurService = () => {
           return (
             <li key={index}>
               <div className={styles.ourServiceCard__topHeading}>
-                <h3>{item?.topHeading}</h3>
+                <h3 className={"divide-x-2"}>&quot; {item?.topHeading}&quot;</h3>
               </div>
               <OurServiceCard {...item} />
             </li>
