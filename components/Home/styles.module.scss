@@ -91,7 +91,7 @@
     }
   }
 }
-.OurWork__header ,.OurClients__header{
+.OurWork__header ,.OurClients__header ,.Testimonial__header{
     h2 {
       text-align: center;
       font-family: "Next Sphere";
@@ -236,4 +236,44 @@
             
         }
     }
+}
+
+.Testimonial{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  &__header{}
+  &__sideBar{
+    .TestimonialCardWrapper{
+      .testimonialCard{
+        background-color: #1e1e1e;
+        border-radius: 1em;
+        padding: 1em;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+
+        i{
+          display: flex;
+          width: 3em;
+          height: 3em;
+          img{
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        p{
+          font-size: 0.8em;
+        }
+        a{
+          font-size: 0.9em;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 }

@@ -4,7 +4,8 @@ const index = () => {
   return (
     <div className={styles.footer}>
       <div className={styles.footer__content}>
-        <p>GET YOUR MISSION IN MOTION</p>
+        <p>GET YOUR MISSION</p>
+        <p>IN MOTION</p>
       </div>
       <div className={styles.footer__buttons}>
         <button>Get a Quote</button>

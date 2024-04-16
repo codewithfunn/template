@@ -1,18 +1,19 @@
 .banner {
   position: relative;
+  padding: 3em 0;
   &__content {
     display: flex;
     flex-direction: column;
     align-items: center;
 
     p {
-      line-height: 0.85;
+      line-height: 0.9;
       &:nth-last-child(2),
       &:nth-last-child(3) {
         font-family: "Monigue";
         font-weight: 700;
         font-style: normal;
-        font-size: 8em;
+        font-size: 12em;
         background: linear-gradient(32deg, rgb(251, 95, 166) 0%, #0078d4 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -21,7 +22,7 @@
       }
       &:nth-last-child(1) {
         font-family: "Monigue";
-        font-size: 12em;
+        font-size: 15em;
         color: black;
         text-shadow: 4px 4px 0 #fff, -4px -4px 0 #fff, 4px -4px 0 #fff,
           -4px 4px 0 #fff;
@@ -63,7 +64,6 @@
 // background: linear-gradient(90deg, rgba(251,95,166,1) 0%, rgba(9,9,121,1) 100%);
 .bannerWithVideo {
   position: relative;
-  width: 90%;
   margin: auto;
   &__Button {
     position: absolute;

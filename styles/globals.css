@@ -3,25 +3,30 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Monigue';
-    src: url('../fonts/monigue-condensed-sans-font-2023-11-27-05-05-53-utc/Monigue.ttf') ;
-    font-weight: 700;
-    font-style: normal;
+  font-family: "Monigue";
+  src: url("../fonts/monigue-condensed-sans-font-2023-11-27-05-05-53-utc/Monigue.ttf");
+  font-weight: 700;
+  font-style: normal;
 }
 @font-face {
-    font-family: 'Next Sphere';
-    src: url('../fonts/next-sphere-extended-sans-serif-font-family-2023-11-27-04-49-21-utc/Next\ Sphere\ Extra\ Bold.otf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
+  font-family: "Next Sphere";
+  src: url("../fonts/next-sphere-extended-sans-serif-font-family-2023-11-27-04-49-21-utc/Next\ Sphere\ Extra\ Bold.otf")
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
 }
-*{
-    /* background-color: black; */
-    color: white;
+* {
+  /* background-color: black; */
+  color: white;
 }
-body{
-    background-color: black;
+body {
+  background-color: black;
 }
-.App{
-    max-width: 1024px;
-    margin: 0 auto;
+.App {
+  max-width: 1024px;
+  margin: 0 auto;
+  background-image: url("/image/overlay/Layer0.png");
+}
+.swiper-pagination-bullets {
+  display: none;
 }

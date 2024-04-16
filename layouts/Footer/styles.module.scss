@@ -1,14 +1,53 @@
 .footer{
+    // &__content{
+    //     font-family: "Monigue"; 
+    //     src: url('../../fonts/monigue-condensed-sans-font-2023-11-27-05-05-53-utc/Monigue.ttf'); 
+    //     font-weight: normal; 
+    //     font-style: normal; 
+    // }
+    // &__buttons{
+    //     font-family: "Next Sphere"; 
+    //     src: url('../../fonts/next-sphere-extended-sans-serif-font-family-2023-11-27-04-49-21-utc/Next Sphere Black.otf'); 
+    //     font-weight: normal; 
+    //     font-style: normal;
+    // }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 4em 0;
+    gap: 1em;
     &__content{
-        font-family: "Monigue"; 
-        src: url('../../fonts/monigue-condensed-sans-font-2023-11-27-05-05-53-utc/Monigue.ttf'); 
-        font-weight: normal; 
-        font-style: normal; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        p{
+            font-size: 2.3em;
+            font-weight: 700;
+            line-height: 1.1;
+            color: black;
+        }
     }
     &__buttons{
-        font-family: "Next Sphere"; 
-        src: url('../../fonts/next-sphere-extended-sans-serif-font-family-2023-11-27-04-49-21-utc/Next Sphere Black.otf'); 
-        font-weight: normal; 
-        font-style: normal;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        button{
+            border-radius: 1em;
+            padding: 0.15em 1.1em;
+            font-size: 1.5em;
+            color: black;
+            border: 2px solid black;
+            font-weight: 600;
+
+            &:last-of-type{
+                background-color: black;
+                color: white;
+            }
+        }
     }
 }
