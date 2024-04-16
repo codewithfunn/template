@@ -1,0 +1,14 @@
+.footer{
+    &__content{
+        font-family: "Monigue"; 
+        src: url('../../fonts/monigue-condensed-sans-font-2023-11-27-05-05-53-utc/Monigue.ttf'); 
+        font-weight: normal; 
+        font-style: normal; 
+    }
+    &__buttons{
+        font-family: "Next Sphere"; 
+        src: url('../../fonts/next-sphere-extended-sans-serif-font-family-2023-11-27-04-49-21-utc/Next Sphere Black.otf'); 
+        font-weight: normal; 
+        font-style: normal;
+    }
+}

@@ -1,0 +1,47 @@
+.ourService{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    &__header{
+        h2{
+            text-align: center;
+            font-family: "Next Sphere";
+            font-weight: 900;
+            font-style: normal;
+            font-size: 3.5em;
+            line-height: 1;
+            background: linear-gradient(32deg, rgb(251, 95, 166) 46%, #0078d4 64%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+    }
+    &__cards{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        >li{
+
+        }
+        &__topHeading{
+
+        }
+        .ourServiceCard{
+            &__overlay{
+                img{
+
+                }
+            }
+            &__content{
+                i{
+                    img{
+
+                    }
+                }
+                &__heading{}
+                &__desc{}
+            }
+        }
+    }
+}
