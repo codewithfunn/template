@@ -9,7 +9,7 @@ const OurServiceCard = ({
   desc,
 }) => {
   return (
-    <div className={`${styles.ourServiceCard}`} style={{ backgroundImage: `url(${backgroundImage.src})` }}>
+    <div className={`${styles.ourServiceCard} shadow-md shadow-pink-300/15 duration-200 ease-in-out  hover:shadow-xl hover:shadow-pink-300/25 hover:delay-200  cursor-pointer`} style={{ backgroundImage: `url(${backgroundImage.src})` }}>
       <div className={styles.ourServiceCard__content}>
         <i className={styles.ourServiceCard__content__icon}>
           <Image src={icon.src} alt={icon.alt} width={200} height={200} />

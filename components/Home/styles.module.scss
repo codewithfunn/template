@@ -16,6 +16,12 @@
       background-clip: text;
       color: transparent;
     }
+    &::before{
+      content:"",
+    }
+    &::after{
+      content: "";
+    }
   }
   &__cards {
     display: flex;

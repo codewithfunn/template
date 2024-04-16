@@ -56,7 +56,7 @@ export default function Home() {
   return (
     <div className={styles.__container}>
       <animated.div style={bannerSpring}>
-        <Banner />
+        <Banner scrollDown={() => window.scrollTo(0, 600)} />
       </animated.div>
       <animated.div style={bannerWithVideoSpring}>
         <BannerWithVideo />

@@ -22,7 +22,7 @@ export const BannerWithVideo = () => {
     </div>
   );
 };
-const index = () => {
+const index = ({scrollDown}) => {
   return (
     <div className={styles.banner}>
       <div className={styles.banner__content}>
@@ -30,7 +30,7 @@ const index = () => {
         <p>OUR CREATIVE</p>
         <p>EMBRACE</p>
       </div>
-      <div className={styles.banner__sideBar}>
+      <div className={styles.banner__sideBar} onClick={()=>scrollDown()}>
         <span>SCROLL DOWN</span>
       </div>
     </div>
