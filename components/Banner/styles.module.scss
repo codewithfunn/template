@@ -4,8 +4,8 @@
   &__content {
     display: flex;
     flex-direction: column;
-    align-items: center;
-
+    align-items: flex-start;
+    padding: 2% 10%; // change
     p {
       line-height: 0.9;
       &:nth-last-child(2),
