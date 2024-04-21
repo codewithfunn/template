@@ -24,7 +24,7 @@ const Index = ({
     <div className={`${styles[styleType]} ${styles.__modal}`}>
       {showButton && (
         <button
-          className={styles.__modal__button}
+          className={`${styles.__modal__button} `}
           type={"button"}
           onClick={handleOpen}
         >

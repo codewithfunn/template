@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-
+import HeaderWithOverlay from '@/components/HeaderWithOverlay'
 // import './styles.css';
 
 // import required modules
@@ -83,6 +83,9 @@ const Testimonial = () => {
     <div className={styles.Testimonial}>
       <div className={styles.Testimonial__header}>
         <h2>OUR Testimonial</h2>
+        <h3 className={styles.OurClients__header__sub}>
+        <HeaderWithOverlay headingImage={{heading:"/image/OurTestimonial/heading.png", heading_overlay:"/image/OurTestimonial/heading_layer.png"}}/>
+        </h3>
       </div>
       <div className={styles.Testimonial__sideBar}>
         <Swiper
@@ -115,7 +118,7 @@ const Testimonial = () => {
             return (
               <SwiperSlide
                 key={index}
-                className={styles.TestimonialCardWrapper}
+                className={`${styles.TestimonialCardWrapper} cursor-pointer `}
               >
                 <TestimonialCard {...item} />
               </SwiperSlide>

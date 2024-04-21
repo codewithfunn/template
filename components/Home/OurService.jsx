@@ -105,7 +105,8 @@ const OurService = () => {
           return (
             <li key={index}>
               <div className={styles.ourServiceCard__topHeading}>
-                <h3 className={"divide-x-2"}>&quot; {item?.topHeading}&quot;</h3>
+                <h3 className={" "}>&quot; {item?.topHeading}&quot;</h3>
+                <hr/>
               </div>
               <OurServiceCard {...item} />
             </li>

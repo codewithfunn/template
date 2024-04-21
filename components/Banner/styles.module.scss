@@ -57,6 +57,7 @@
       padding: 0.2em 0.5em;
       border-radius: 1.5em;
       font-weight: 600;
+      color: white;
     }
   }
 }
@@ -67,8 +68,8 @@
   margin: auto;
   &__Button {
     position: absolute;
-    top: 48%;
-    left: 48%;
+    top: 36%;
+    left: 45%;
     button {
         font-size: 2.2em;
     background: rgb(251, 95, 166);
@@ -76,6 +77,15 @@
     padding: 0.8em;
     border-radius: 100%;
     box-shadow: 0px 0px 23px 10px white;
+    transition: ease-in-out 0.5s;
+
+    &:hover{
+      transition: ease-in-out 0.5s;
+      box-shadow:  0px 0px 42px 22px rgb(180, 70, 153);
+      svg{
+        color: #ffcde9e3;
+      }
+    }
     }
   }
   &__video {
