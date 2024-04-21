@@ -8,7 +8,7 @@ import Testimonial from '@/components/Home/Testimonial';
 import { useEffect, useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { useMediaQuery } from 'react-responsive';
-
+import HeaderWithOverlay from "@/components/HeaderWithOverlay"
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
   const isMobile = useMediaQuery({ maxWidth: 768 }); // Example breakpoint
@@ -57,6 +57,7 @@ export default function Home() {
 
   return (
     <div className={styles.__container}>
+     
       <animated.div style={bannerSpring}>
         <Banner scrollDown={() => window.scrollTo(0, 600)} />
       </animated.div>

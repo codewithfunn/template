@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./styles.module.scss";
 import Image from 'next/image';
 import { useMediaQuery } from "react-responsive";
+import HeaderWithOverlay from '@/components/HeaderWithOverlay'
 const OurServiceCard = ({
   icon,
   backgroundImage,
@@ -94,7 +95,10 @@ const OurService = () => {
   return (
     <div className={styles.ourService}>
       <div className={styles.ourService__header}>
-        <h2>OUR SERVICES</h2>
+        {/* <h2>OUR SERVICES</h2> */}
+        <h3 className={styles.OurClients__header__sub}>
+        <HeaderWithOverlay headingImage={{heading:"/image/OurService/heading.png", heading_overlay:"/image/OurService/heading_layer.png"}}/>
+        </h3>
       </div>
       <ul className={styles.ourService__cards}>
         {cards.map((item, index) => {

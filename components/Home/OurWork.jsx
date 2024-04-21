@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./styles.module.scss";
 import Image from 'next/image';
+import HeaderWithOverlay from '@/components/HeaderWithOverlay';
 const OurWork = () => {
   const ourWorkData = {
     heading:"Our Work",
@@ -131,6 +132,9 @@ const OurWork = () => {
     <div className={styles.OurWork}>
       <div className={styles.OurWork__header}>
         <h2>{ourWorkData.heading}</h2>
+        <h3 className={styles.OurClients__header__sub}>
+        <HeaderWithOverlay headingImage={{heading:"/image/OurWork/heading.png", heading_overlay:"/image/OurWork/heading_layer.png"}}/>
+        </h3>
       </div>
       <ul className={styles.OurWork__lists}>
         {ourWorkData.cards.map((card,index) => {
