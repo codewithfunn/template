@@ -3,10 +3,12 @@ import Header from "@/layouts/Header";
 import Footer from "@/layouts/Footer";
 export default function App({ Component, pageProps }) {
   return (
-    <div className="App">
+    <div className="AppContainer">
+      <div className="App">
       <Header />
       <Component {...pageProps} />
       <Footer />
+    </div>
     </div>
   );
 }

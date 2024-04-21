@@ -5,3 +5,37 @@
     padding: 5% 10%;
     margin-bottom: 2em;
 }
+
+@media screen and (max-width: 1280px) {
+    
+}
+@media screen and (max-width: 1024px) {
+    .__container{
+        display: flex;
+        flex-direction: column;
+        gap: 3.5em;
+        padding: 5% 10%;
+        margin-bottom: 2em;
+    }
+}
+@media screen and (max-width: 968px) {
+    .__container{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        padding: 5% 5%;
+        margin-bottom: 2em;
+    }
+}
+@media screen and (max-width: 780px) {
+    
+}
+@media screen and (max-width: 480px) {
+    
+}
+@media screen and (max-width: 320px) {
+    
+}
+@media screen and (max-width: 280px) {
+    
+}

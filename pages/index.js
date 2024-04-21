@@ -7,9 +7,11 @@ import OurClients from '@/components/Home/OurClients';
 import Testimonial from '@/components/Home/Testimonial';
 import { useEffect, useState } from 'react';
 import { useSpring, animated } from 'react-spring';
+import { useMediaQuery } from 'react-responsive';
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
+  const isMobile = useMediaQuery({ maxWidth: 768 }); // Example breakpoint
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,28 +31,28 @@ export default function Home() {
   });
 
   const bannerWithVideoSpring = useSpring({
-    opacity: scrollY >= 300 ? 1 : 0,
-    transform: `translateY(${scrollY >= 300 ? 0 : 50}px)`,
+    opacity: isMobile ? (scrollY >= 300 ? 1 : 0) : (scrollY >= 600 ? 1 : 0),
+    transform: `translateY(${isMobile ? (scrollY >= 300 ? 0 : 50) : (scrollY >= 600 ? 0 : 50)}px)`,
   });
 
   const ourServiceSpring = useSpring({
-    opacity: scrollY >= 900 ? 1 : 0,
-    transform: `translateY(${scrollY >= 900 ? 0 : 50}px)`,
+    opacity: isMobile ? (scrollY >= 700 ? 1 : 0) : (scrollY >= 900 ? 1 : 0),
+    transform: `translateY(${isMobile ? (scrollY >= 700 ? 0 : 50) : (scrollY >= 900 ? 0 : 50)}px)`,
   });
 
   const ourWorkSpring = useSpring({
-    opacity: scrollY >= 1020 ? 1 : 0,
-    transform: `translateY(${scrollY >= 1020 ? 0 : 50}px)`,
+    opacity: isMobile ? (scrollY >= 820 ? 1 : 0) : (scrollY >= 1020 ? 1 : 0),
+    transform: `translateY(${isMobile ? (scrollY >= 820 ? 0 : 50) : (scrollY >= 1020 ? 0 : 50)}px)`,
   });
 
   const testimonialSpring = useSpring({
-    opacity: scrollY >= 1300 ? 1 : 0,
-    transform: `translateY(${scrollY >= 1300 ? 0 : 50}px)`,
+    opacity: isMobile ? (scrollY >= 1100 ? 1 : 0) : (scrollY >= 1300 ? 1 : 0),
+    transform: `translateY(${isMobile ? (scrollY >= 1100 ? 0 : 50) : (scrollY >= 1300 ? 0 : 50)}px)`,
   });
 
   const ourClientsSpring = useSpring({
-    opacity: scrollY >= 1500 ? 1 : 0,
-    transform: `translateY(${scrollY >= 1500 ? 0 : 50}px)`,
+    opacity: isMobile ? (scrollY >= 1300 ? 1 : 0) : (scrollY >= 1500 ? 1 : 0),
+    transform: `translateY(${isMobile ? (scrollY >= 1300 ? 0 : 50) : (scrollY >= 1500 ? 0 : 50)}px)`,
   });
 
   return (

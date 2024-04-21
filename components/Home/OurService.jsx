@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./styles.module.scss";
 import Image from 'next/image';
+import { useMediaQuery } from "react-responsive";
 const OurServiceCard = ({
   icon,
   backgroundImage,
@@ -8,6 +9,8 @@ const OurServiceCard = ({
   heading,
   desc,
 }) => {
+  const isMedium = useMediaQuery({ query: "(max-width:1300px)" });
+  const isTablet = useMediaQuery({ query: "(max-width:1024px)" });
   return (
     <div className={`${styles.ourServiceCard} shadow-md shadow-pink-300/15 duration-200 ease-in-out  hover:shadow-xl hover:shadow-pink-300/25 hover:delay-200  cursor-pointer`} style={{ backgroundImage: `url(${backgroundImage.src})` }}>
       <div className={styles.ourServiceCard__content}>
@@ -15,7 +18,7 @@ const OurServiceCard = ({
           <Image src={icon.src} alt={icon.alt} width={200} height={200} />
         </i>
         <h3 className={styles.ourServiceCard__content__heading}>{heading}</h3>
-        <p className={styles.ourServiceCard__content__desc}>{desc}</p>
+        <p className={styles.ourServiceCard__content__desc}>{isTablet?desc.substring(0, 150)+"...": desc}</p>
       </div>
     </div>
   );
