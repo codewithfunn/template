@@ -8,7 +8,9 @@ import Testimonial from '@/components/Home/Testimonial';
 import { useEffect, useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { useMediaQuery } from 'react-responsive';
-import HeaderWithOverlay from "@/components/HeaderWithOverlay"
+import HeaderWithOverlay from "@/components/HeaderWithOverlay";
+import Header from "@/layouts/Header";
+import Footer from "@/layouts/Footer";
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
   const isMobile = useMediaQuery({ maxWidth: 768 }); // Example breakpoint
@@ -54,12 +56,21 @@ export default function Home() {
     opacity: isMobile ? (scrollY >= 1300 ? 1 : 0) : (scrollY >= 1500 ? 1 : 0),
     transform: `translateY(${isMobile ? (scrollY >= 1300 ? 0 : 50) : (scrollY >= 1500 ? 0 : 50)}px)`,
   });
-
+  const bannerContent = {
+    heading:{
+      p:[
+        "YOUR STORIES",
+        "OUR CREATIVE",
+        "EMBRACE",
+      ]
+    }
+  }
   return (
+    <>
+    <Header />
     <div className={styles.__container}>
-     
       <animated.div style={bannerSpring}>
-        <Banner scrollDown={() => window.scrollTo(0, 600)} />
+        <Banner scrollDown={() => window.scrollTo(0, 600)} data={bannerContent} />
       </animated.div>
       <animated.div style={bannerWithVideoSpring}>
         <BannerWithVideo />
@@ -77,5 +88,7 @@ export default function Home() {
         <OurClients />
       </animated.div>
     </div>
+    <Footer />
+    </>
   );
 }

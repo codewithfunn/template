@@ -1,6 +1,6 @@
 .banner {
   position: relative;
-  padding: 3em 0;
+  padding: 1em 0;
   &__content {
     display: flex;
     flex-direction: column;
@@ -10,15 +10,37 @@
       line-height: 0.9;
       &:nth-last-child(2),
       &:nth-last-child(3) {
+        
+        text-transform: uppercase;
+        background-image: linear-gradient(
+          32deg,
+          rgb(251, 95, 166) 0%,
+          #0078d4 100%,
+          // #ff1361 67%,
+          // #fff800 100%
+        );
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        color: #fff;
+        background-clip: text;
+        text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 5s reverse infinite ;
+        display: inline-block;
+        font-size: 190px;
+
         font-family: "Monigue";
         font-weight: 700;
         font-style: normal;
         font-size: 12em;
-        background: linear-gradient(32deg, rgb(251, 95, 166) 0%, #0078d4 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        color: transparent;
+        // background: linear-gradient(32deg, rgb(251, 95, 166) 0%, #0078d4 100%);
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
+        // background-clip: text;
+        // animation: textclip 2s linear infinite;
+        // color: transparent;
       }
       &:nth-last-child(1) {
         font-family: "Monigue";
@@ -71,37 +93,40 @@
     top: 36%;
     left: 45%;
     button {
-        font-size: 2.2em;
-    background: rgb(251, 95, 166);
-    background: linear-gradient(90deg, rgb(251, 95, 166) 0%, rgb(9, 9, 121) 100%);
-    padding: 0.8em;
-    border-radius: 100%;
-    box-shadow: 0px 0px 23px 10px white;
-    transition: ease-in-out 0.5s;
-
-    &:hover{
+      font-size: 2.2em;
+      background: rgb(251, 95, 166);
+      background: linear-gradient(
+        90deg,
+        rgb(251, 95, 166) 0%,
+        rgb(9, 9, 121) 100%
+      );
+      padding: 0.8em;
+      border-radius: 100%;
+      box-shadow: 0px 0px 23px 10px white;
       transition: ease-in-out 0.5s;
-      box-shadow:  0px 0px 42px 22px rgb(180, 70, 153);
-      svg{
-        color: #ffcde9e3;
+
+      &:hover {
+        transition: ease-in-out 0.5s;
+        box-shadow: 0px 0px 42px 22px rgb(180, 70, 153);
+        svg {
+          color: #ffcde9e3;
+        }
       }
-    }
     }
   }
   &__video {
-    img{
-        width: 100%;
-        height: 100%;
-        border-radius: 1em;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 1em;
     }
   }
 }
 // Video
-.video{
+.video {
   border-radius: 1em;
 }
 @media screen and (max-width: 1280px) {
-  
 }
 @media screen and (max-width: 1024px) {
   .banner {
@@ -111,7 +136,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-  
+
       p {
         line-height: 0.9;
         &:nth-last-child(2),
@@ -120,7 +145,11 @@
           font-weight: 700;
           font-style: normal;
           font-size: 10em; // change
-          background: linear-gradient(32deg, rgb(251, 95, 166) 0%, #0078d4 100%);
+          background: linear-gradient(
+            32deg,
+            rgb(251, 95, 166) 0%,
+            #0078d4 100%
+          );
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -128,7 +157,7 @@
         }
         &:nth-last-child(1) {
           font-family: "Monigue";
-          font-size: 14em;// change
+          font-size: 14em; // change
           color: black;
           text-shadow: 4px 4px 0 #fff, -4px -4px 0 #fff, 4px -4px 0 #fff,
             -4px 4px 0 #fff;
@@ -175,7 +204,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-  
+
       p {
         line-height: 0.9;
         &:nth-last-child(2),
@@ -184,7 +213,11 @@
           font-weight: 700;
           font-style: normal;
           font-size: 8em; // change
-          background: linear-gradient(32deg, rgb(251, 95, 166) 0%, #0078d4 100%);
+          background: linear-gradient(
+            32deg,
+            rgb(251, 95, 166) 0%,
+            #0078d4 100%
+          );
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -192,7 +225,7 @@
         }
         &:nth-last-child(1) {
           font-family: "Monigue";
-          font-size: 11em;// change
+          font-size: 11em; // change
           color: black;
           text-shadow: 4px 4px 0 #fff, -4px -4px 0 #fff, 4px -4px 0 #fff,
             -4px 4px 0 #fff;
@@ -239,7 +272,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-  
+
       p {
         line-height: 1;
         &:nth-last-child(2),
@@ -248,7 +281,11 @@
           font-weight: 700;
           font-style: normal;
           font-size: 5.2em; // change
-          background: linear-gradient(32deg, rgb(251, 95, 166) 0%, #0078d4 100%);
+          background: linear-gradient(
+            32deg,
+            rgb(251, 95, 166) 0%,
+            #0078d4 100%
+          );
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -256,7 +293,7 @@
         }
         &:nth-last-child(1) {
           font-family: "Monigue";
-          font-size: 7.8em;// change
+          font-size: 7.8em; // change
           color: black;
           text-shadow: 4px 4px 0 #fff, -4px -4px 0 #fff, 4px -4px 0 #fff,
             -4px 4px 0 #fff;
@@ -302,19 +339,23 @@
       top: 27%; // change
       left: 38%; // change
       button {
-          font-size: 2.2em;
-      background: rgb(251, 95, 166);
-      background: linear-gradient(90deg, rgb(251, 95, 166) 0%, rgb(9, 9, 121) 100%);
-      padding: 0.8em;
-      border-radius: 100%;
-      box-shadow: 0px 0px 23px 10px white;
+        font-size: 2.2em;
+        background: rgb(251, 95, 166);
+        background: linear-gradient(
+          90deg,
+          rgb(251, 95, 166) 0%,
+          rgb(9, 9, 121) 100%
+        );
+        padding: 0.8em;
+        border-radius: 100%;
+        box-shadow: 0px 0px 23px 10px white;
       }
     }
     &__video {
-      img{
-          width: 100%;
-          height: 100%;
-          border-radius: 1em;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 1em;
       }
     }
   }
@@ -327,7 +368,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-  
+
       p {
         line-height: 1;
         &:nth-last-child(2),
@@ -336,7 +377,11 @@
           font-weight: 700;
           font-style: normal;
           font-size: 5.2em;
-          background: linear-gradient(32deg, rgb(251, 95, 166) 0%, #0078d4 100%);
+          background: linear-gradient(
+            32deg,
+            rgb(251, 95, 166) 0%,
+            #0078d4 100%
+          );
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -345,7 +390,7 @@
         }
         &:nth-last-child(1) {
           font-family: "Monigue";
-          font-size: 4.5em;// change
+          font-size: 4.5em; // change
           color: black;
           text-shadow: 4px 4px 0 #fff, -4px -4px 0 #fff, 4px -4px 0 #fff,
             -4px 4px 0 #fff;
@@ -391,26 +436,34 @@
       top: 27%; // change
       left: 38%; // change
       button {
-          font-size: 1.8em;
-      background: rgb(251, 95, 166);
-      background: linear-gradient(90deg, rgb(251, 95, 166) 0%, rgb(9, 9, 121) 100%);
-      padding: 0.8em;
-      border-radius: 100%;
-      box-shadow: 0px 0px 23px 10px white;
+        font-size: 1.8em;
+        background: rgb(251, 95, 166);
+        background: linear-gradient(
+          90deg,
+          rgb(251, 95, 166) 0%,
+          rgb(9, 9, 121) 100%
+        );
+        padding: 0.8em;
+        border-radius: 100%;
+        box-shadow: 0px 0px 23px 10px white;
       }
     }
     &__video {
-      img{
-          width: 100%;
-          height: 100%;
-          border-radius: 1em;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 1em;
       }
     }
   }
 }
 @media screen and (max-width: 320px) {
-  
 }
 @media screen and (max-width: 280px) {
-  
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
 }

@@ -1,0 +1,129 @@
+.ourService {
+  padding: 2em 4em;
+  
+  position: relative;
+  &__banner{
+    &__spotLight{
+        position: absolute;
+        top: 0;
+        left: 0;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+  }
+}
+// ourServiceDesc
+.ourServiceDesc {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  line-height: 1;
+  margin: 10em auto;
+  max-width: 1280px;
+  p {
+    font-family: "Monigue";
+    font-size: 4.5em;
+    font-weight: 600;
+  }
+}
+// ourServicesCards
+.ourServicesCards {
+  max-width: 1280px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // gap: 5em;
+  li {
+    // filter:grayscale(1);
+
+    hr {
+      width: 70%;
+      margin: 4em auto;
+      border-top-width: 0.2em;
+      border-radius: 2em;
+    }
+    &:last-of-type {
+      hr {
+        display: none;
+      }
+    }
+
+    @for $i from 1 through 10 {
+      $flex-direction: if($i % 2 == 0, row, row-reverse);
+      // $grayscale : if($i % 2 == 0, grayscale(1), grayscale(0));
+      &:nth-child(#{$i}) {
+        > div {
+          display: flex;
+          flex-direction: $flex-direction !important;
+          // filter:$grayscale;
+        }
+      }
+    }
+  }
+}
+.ourServicesCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  &__content {
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    &__heading {
+      line-height: 0.9;
+      h2 {
+        font-family: "Next Sphere";
+        font-weight: 700;
+        font-style: normal;
+        font-size: 3.5em;
+        background: linear-gradient(32deg, rgb(251, 95, 166) 0%, #0078d4 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+      }
+    }
+    &__desc {
+      display: flex;
+      flex-direction: column;
+      gap: 2.2em;
+      p {
+        font-size: 1.2em;
+      }
+    }
+    &__button {
+      font-size: 1.7em;
+      font-weight: 700;
+      background: linear-gradient(32deg, rgb(251, 95, 166) 0%, #0078d4 100%);
+      color: white;
+      padding: 0.5em 1em;
+      border-radius: 2em;
+      width: fit-content;
+      width: -moz-fit-content;
+    }
+  }
+  &__image {
+    width: 49%;
+    position: relative;
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      box-shadow: 0px 0px 44px -11px #8b6abb;
+      border-radius: 1.1em;
+      transition: ease-in-out 0.5s;
+
+      &:hover {
+        transition: ease-in-out 0.5s;
+        box-shadow: 0px 0px 44px 11px #b466b3;
+      }
+    }
+  }
+}

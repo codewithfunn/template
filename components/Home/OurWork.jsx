@@ -1,7 +1,44 @@
 import React from "react";
+import { useState } from "react";
+import { useRef } from "react";
 import styles from "./styles.module.scss";
 import Image from 'next/image';
 import HeaderWithOverlay from '@/components/HeaderWithOverlay';
+
+export const OurWorkCard = ({card}) => {
+  const { video } = card;
+  const { src, alt } = video;
+  const [isHovered, setIsHovered] = useState(false);
+  const videoRef = useRef(null);
+
+  const handleMouseEnter = () => {
+      setIsHovered(true);
+      if (videoRef.current) {
+          videoRef.current.play(); // Start playing the video on hover
+      }
+  };
+
+  const handleMouseLeave = () => {
+      setIsHovered(false);
+      if (videoRef.current) {
+          videoRef.current.pause(); // Pause the video when not hovered
+          videoRef.current.currentTime = 0; // Reset video playback to the beginning
+      }
+  };
+
+  return (
+      <div className={styles.ourWorkCard}>
+          <video
+              ref={videoRef}
+              src={src}
+              alt={alt}
+              controls={false} // Hide controls when hovered
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+          />
+      </div>
+  );
+}
 const OurWork = () => {
   const ourWorkData = {
     heading:"Our Work",
@@ -128,6 +165,12 @@ const OurWork = () => {
       },
     ]
   }
+  const cards = {
+    video:{
+      src:"/video/group_discussion.mp4",
+      alt:"group_discussion"
+    }
+  }
   return (
     <div className={styles.OurWork}>
       <div className={styles.OurWork__header}>
@@ -139,13 +182,14 @@ const OurWork = () => {
       <ul className={styles.OurWork__lists}>
         {ourWorkData.cards.map((card,index) => {
           return (
-            <li key={index} className={styles.OurWork__lists__card}>
-              <Image
+            <li key={index} className={`${styles.OurWork__lists__card} hover:scale-150`}>
+              {/* <Image
                 src={card.img.url}
                 alt={card.img.alt}
                 width={200}
                 height={200}
-              />
+              /> */}
+              <OurWorkCard card={cards}/>
             </li>
           );
         })}

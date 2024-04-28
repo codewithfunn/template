@@ -33,13 +33,15 @@ export const BannerWithVideo = () => {
     </div>
   );
 };
-const index = ({ scrollDown }) => {
+const index = ({ scrollDown , data }) => {
   return (
     <div className={styles.banner}>
       <div className={styles.banner__content}>
-        <p>YOUR STORIES</p>
-        <p>OUR CREATIVE</p>
-        <p>EMBRACE</p>
+        {
+          data.heading.p.map((item,index)=>{
+            return <p key={index}>{item}</p>
+          })
+        }
       </div>
       <div className={styles.banner__sideBar} onClick={() => scrollDown()}>
         <span>SCROLL DOWN</span>

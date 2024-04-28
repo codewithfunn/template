@@ -5,9 +5,9 @@ export default function App({ Component, pageProps }) {
   return (
     <div className="AppContainer">
       <div className="App">
-      <Header />
+      
       <Component {...pageProps} />
-      <Footer />
+      
     </div>
     </div>
   );
